@@ -1,22 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Friendly Pro Web Site</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <img id="mainpic" src="assets/mainpic.png" alt="Main Image">
-        <h2>We're here to solve your cleaning needs — and. 
-            We're happy to do it. 
-            Call us at  <a href="tel:18557302470" class="phone-number">1-855-730-2470</a> 
-            or if you have any questions or concerns, 
-            email us directly at <a href="mailto:contact@friendlyproclean.com" class="email-address">contact@friendlyproclean.com</a>.
-        </h2>
-        <button id="clean">explore our services</button>
-        <button id="quote">Get a Quote</button>
-        <h1>Friendly Pro Clean LLC</h1>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friendly Pro Web Site</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <img id="mainpic" src="assets/mainpic.png" alt="Main Image" />
+    <h2>
+      We're here to solve your cleaning needs — and. <br />
+      We're happy to do it. <br />
+      Call us at
+      <a href="tel:18557302470" class="phone-number">1-855-730-2470</a><br />
+      or if you have any questions or concerns,<br />
+      email us directly at
+      <a href="mailto:contact@friendlyproclean.com" class="email-address"
+        >contact@friendlyproclean.com</a
+      >.
+    </h2>
+    <!-- The Button -->
+    <button onclick="openModal()" class="see-clean-button">
+      See What We Clean
+    </button>
+
+    <!-- The Modal -->
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>What We Clean</h2>
+        <ul>
+          <li>
+            <strong>Standard Cleaning</strong> – $140 for a 1-bedroom <br /><em
+              >Includes dusting, vacuuming, mopping, kitchen & bathroom
+              wipe-down</em
+            >
+          </li>
+          <li><strong>Additional Bedrooms</strong> – $30 each</li>
+
+          <li>
+            <strong>Deep Cleaning</strong> – Add $100 <br /><em
+              >Includes inside fridge, oven, baseboards, extra detailing</em
+            >
+          </li>
+
+          <li>
+            <strong>Move In / Move Out Cleaning</strong> – Add $100 <br /><em
+              >Full reset for empty spaces — includes inside cabinets, drawers,
+              appliances</em
+            >
+          </li>
+
+          <li>
+            <strong>Commercial Cleaning</strong> – Custom pricing <br /><em
+              >Offices, salons, retail stores – flexible scheduling
+              available</em
+            >
+          </li>
+
+          <li>
+            <strong>Carpet Cleaning</strong> – $150 minimum (1–2 rooms)
+            <br /><em
+              >Each additional room: ask for quote • Hallway: around $40</em
+            >
+          </li>
+
+          <li>
+            <strong>Upholstery Cleaning</strong> <br /><em
+              >Couches from $50 • Chairs from $10 • Bundle & save</em
+            >
+          </li>
+        </ul>
+
+        <p>
+          <em
+            >*Final quote may vary depending on condition, size, and service
+            area. Ask for a custom quote by text or email.*</em
+          >
+        </p>
+      </div>
+    </div>
+    <!-- Get a Quote Button -->
+    <button onclick="openQuoteModal()" class="quote-button">Get a Quote</button>
+
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeQuoteModal()">&times;</span>
+        <h2>Request a Quote</h2>
+        <form
+          action="https://formsubmit.co/contact@friendlyproclean.com"
+          method="POST"
+          class="quote-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number (optional)"
+          />
+          <textarea
+            name="message"
+            placeholder="What do you need cleaned? Tell us a bit about the space."
+            required
+          ></textarea>
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://friendlyproclean.com/thank-you.html"
+          />
+          <button type="submit">Send Request</button>
+        </form>
+      </div>
+    </div>
+
+    <h1>Friendly Pro Clean LLC</h1>
+  </body>
 </html>
