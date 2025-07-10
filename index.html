@@ -2,7 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Professional and affordable cleaning services in Chicago. Standard, deep, move-out, carpet, and eco-friendly cleaning. Call today for a free quote."
+    />
+    <meta
+      name="keywords"
+      content="cleaning services Chicago, carpet cleaning, deep cleaning, move out cleaning, eco-friendly cleaners, FriendlyProClean"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FriendlyProClean Professional Cleaning Services</title>
+    <meta
+      name="description"
+      content="FriendlyProClean offers standard, deep, move-in/out, and eco-friendly cleaning services in Chicago. We clean carpets, couches, homes, and offices. Book today!"
+    />
+
     <title>Friendly Pro Web Site</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
@@ -12,18 +26,23 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <img id="mainpic" src="assets/mainpic.png" alt="Main Image" />
+    <img
+      id="mainpic"
+      src="assets/mainpic.png"
+      alt="FriendlyProClean home and carpet cleaning team in Chicago"
+    />
     <h2>
-      We're here to solve your cleaning needs — and. <br />
-      We're happy to do it. <br />
-      Call us at
+      Professional Cleaning Services You Can Trust<br />
+      From homes to offices — we clean carpets, couches, and everything in
+      between.<br />
+      Call us now at
       <a href="tel:18557302470" class="phone-number">1-855-730-2470</a><br />
-      or if you have any questions or concerns,<br />
-      email us directly at
+      Or email us at
       <a href="mailto:contact@friendlyproclean.com" class="email-address"
         >contact@friendlyproclean.com</a
-      >.
+      >
     </h2>
+
     <!-- The Button -->
     <button onclick="openModal()" class="see-clean-button">
       See What We Clean
@@ -122,5 +141,42 @@
     </div>
 
     <h1>Friendly Pro Clean LLC</h1>
+    <footer
+      style="
+        font-size: 0.8rem;
+        color: #ccc;
+        text-align: center;
+        margin-top: 40px;
+      "
+    >
+      Serving Chicago, Cook County, and surrounding areas. We specialize in
+      residential, move-out, deep, carpet, and eco-friendly cleaning services.
+      Call 1-855-730-2470 for fast quotes.
+    </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "FriendlyProClean",
+        "image": "https://friendlyproclean.com/assets/mainpic.png",
+        "url": "https://friendlyproclean.com",
+        "telephone": "+1-855-730-2470",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chicago",
+          "addressRegion": "IL",
+          "postalCode": "60601",
+          "addressCountry": "US"
+        },
+        "openingHours": "Mo-Sa 08:00-20:00",
+        "email": "contact@friendlyproclean.com",
+        "description": "FriendlyProClean provides trusted residential and commercial cleaning services in the Chicago area. We specialize in carpet cleaning, move-in/move-out, and deep cleaning services.",
+        "areaServed": {
+          "@type": "Place",
+          "name": ["Chicago", "Cook County", "North Side", "South Side"]
+        }
+      }
+    </script>
   </body>
 </html>
